@@ -1,0 +1,659 @@
+//Sequencias//
+
+//Exercício 01//
+
+package main
+
+import "fmt"
+
+func main() {
+	var num1, num2, num3 int
+
+	fmt.Print("Digite o primeiro número: ")
+	fmt.Scan(&num1)
+
+	fmt.Print("Digite o segundo número: ")
+	fmt.Scan(&num2)
+
+	fmt.Print("Digite o terceiro número: ")
+	fmt.Scan(&num3)
+
+	soma := num1 + num2 + num3
+
+	fmt.Println("A soma dos números é:", soma)
+}
+
+//Exercício 02//
+
+package main
+
+import "fmt"
+
+func main() {
+	var numero int
+
+	fmt.Print("Digite um número inteiro: ")
+	fmt.Scan(&numero)
+
+	dobro := numero * 2
+	triplo := numero * 3
+	quadruplo := numero * 4
+
+	fmt.Println("O dobro do número é:", dobro)
+	fmt.Println("O triplo do número é:", triplo)
+	fmt.Println("O quadruplo do número é:", quadruplo)
+}
+
+//Exercício 03//
+
+package main
+
+import "fmt"
+
+func main() {
+	var peso, altura float64
+
+	fmt.Print("Digite o peso (em kg): ")
+	fmt.Scan(&peso)
+
+	fmt.Print("Digite a altura (em metros): ")
+	fmt.Scan(&altura)
+
+	imc := peso / (altura * altura)
+
+	fmt.Printf("O IMC é: %.2f\n", imc)
+}
+
+//Exercício 04//
+
+package main
+
+import "fmt"
+
+func main() {
+	var num1, num2, num3 float64
+
+	fmt.Print("Digite o primeiro número: ")
+	fmt.Scan(&num1)
+
+	fmt.Print("Digite o segundo número: ")
+	fmt.Scan(&num2)
+
+	fmt.Print("Digite o terceiro número: ")
+	fmt.Scan(&num3)
+
+	mediaPonderada := (num1*2 + num2*3 + num3*5) / 10
+
+	fmt.Printf("A média ponderada é: %.2f\n", mediaPonderada)
+}
+
+//Exercício 05//
+
+package main
+
+import "fmt"
+
+func main() {
+	var idadeAnos int
+
+	fmt.Print("Digite a idade em anos: ")
+	fmt.Scan(&idadeAnos)
+
+	idadeDias := idadeAnos * 365
+
+	fmt.Println("A idade em dias é:", idadeDias)
+}
+
+//Exercício 06//
+
+package main
+
+import "fmt"
+
+func main() {
+	var salario float64
+
+	fmt.Print("Digite o salário do funcionário: ")
+	fmt.Scan(&salario)
+
+	aumento := salario * 0.15
+	novoSalario := salario + aumento
+
+	fmt.Println("O novo salário com aumento de 15% é:", novoSalario)
+}
+
+//Exercício 07//
+
+package main
+
+import "fmt"
+
+func main() {
+	var numero int
+
+	fmt.Print("Digite um número inteiro: ")
+	fmt.Scan(&numero)
+
+	sucessor := numero + 1
+	antecessor := numero - 1
+
+	fmt.Println("O sucessor do número", numero, "é:", sucessor)
+	fmt.Println("O antecessor do número", numero, "é:", antecessor)
+}
+
+//Exercício 08//
+
+package main
+
+import "fmt"
+
+func main() {
+	var diasTrabalhados int
+	var valorDiaria float64
+
+	fmt.Print("Digite o número de dias trabalhados: ")
+	fmt.Scan(&diasTrabalhados)
+
+	fmt.Print("Digite o valor da diária: ")
+	fmt.Scan(&valorDiaria)
+
+	salario := float64(diasTrabalhados) * valorDiaria
+
+	fmt.Println("O salário do funcionário é:", salario)
+}
+
+//Exercício 09//
+
+package main
+
+import "fmt"
+
+func main() {
+	var preco float64
+
+	fmt.Print("Digite o preço do produto: ")
+	fmt.Scan(&preco)
+
+	desconto := preco * 0.1
+	precoComDesconto := preco - desconto
+
+	fmt.Println("O valor do produto com desconto de 10% é:", precoComDesconto)
+}
+
+//Exercício 10//
+
+package main
+
+import "fmt"
+
+func main() {
+	var pesoKg float64
+
+	fmt.Print("Digite o peso em quilos: ")
+	fmt.Scan(&pesoKg)
+
+	pesoLb := pesoKg * 2.20462
+
+	fmt.Println("O peso em libras é:", pesoLb)
+}
+
+//Seleção//
+
+//Exercício 01//
+
+package main
+
+import "fmt"
+
+func main() {
+	var num1, num2 int
+
+	fmt.Print("Digite o primeiro número: ")
+	fmt.Scan(&num1)
+
+	fmt.Print("Digite o segundo número: ")
+	fmt.Scan(&num2)
+
+	maior := num1
+
+	if num2 > maior {
+		maior = num2
+	}
+
+	fmt.Println("O maior número é:", maior)
+}
+
+//Exercício 02//
+
+package main
+
+import "fmt"
+
+func main() {
+	var num1, num2, num3 int
+
+	fmt.Print("Digite o primeiro número: ")
+	fmt.Scan(&num1)
+
+	fmt.Print("Digite o segundo número: ")
+	fmt.Scan(&num2)
+
+	fmt.Print("Digite o terceiro número: ")
+	fmt.Scan(&num3)
+
+	menor := num1
+
+	if num2 < menor {
+		menor = num2
+	}
+
+	if num3 < menor {
+		menor = num3
+	}
+
+	fmt.Println("O menor número é:", menor)
+}
+
+//Exercício 03//
+
+package main
+
+import "fmt"
+
+func main() {
+	var num int
+
+	fmt.Print("Digite um número inteiro: ")
+	fmt.Scan(&num)
+
+	if num%2 == 0 {
+		fmt.Println("O número é par.")
+	} else {
+		fmt.Println("O número é ímpar.")
+	}
+}
+
+//Exercício 04//
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var altura, pesoIdeal, imc float64
+	var sexo string
+
+	fmt.Print("Digite a altura (em metros): ")
+	fmt.Scan(&altura)
+
+	fmt.Print("Digite o sexo (M/F): ")
+	fmt.Scan(&sexo)
+
+	if sexo == "M" {
+		pesoIdeal = 72.7*altura - 58
+	} else if sexo == "F" {
+		pesoIdeal = 62.1*altura - 44.7
+	} else {
+		fmt.Println("Sexo inválido. Por favor, digite M para masculino ou F para feminino.")
+		return
+	}
+
+	fmt.Print("Digite o peso (em quilos): ")
+	fmt.Scan(&imc)
+
+	if imc < pesoIdeal {
+		fmt.Println("Abaixo do peso ideal.")
+	} else if imc == pesoIdeal {
+		fmt.Println("Dentro do peso ideal.")
+	} else {
+		fmt.Println("Acima do peso ideal.")
+	}
+}
+
+//Exercício 05//
+
+package main
+
+import "fmt"
+
+func main() {
+	var numero int
+
+	fmt.Print("Digite um número inteiro: ")
+	fmt.Scan(&numero)
+
+	if numero%3 == 0 && numero%5 == 0 {
+		fmt.Println("O número é múltiplo de 3 e 5.")
+	} else {
+		fmt.Println("O número não é múltiplo de 3 e 5 ao mesmo tempo.")
+	}
+}
+
+//Exercício 06//
+
+package main
+
+import "fmt"
+
+func main() {
+	var numero1, numero2 int
+
+	fmt.Print("Digite o primeiro número inteiro: ")
+	fmt.Scan(&numero1)
+
+	fmt.Print("Digite o segundo número inteiro: ")
+	fmt.Scan(&numero2)
+
+	if numero1 > 0 && numero2 > 0 {
+		resultado := numero1 * numero2
+		fmt.Println("Resultado da multiplicação:", resultado)
+	} else {
+		resultado := numero1 + numero2
+		fmt.Println("Resultado da soma:", resultado)
+	}
+}
+
+//Exercício 07//
+
+package main
+
+import "fmt"
+
+func main() {
+	var salario float64
+
+	fmt.Print("Digite o salário do funcionário: ")
+	fmt.Scan(&salario)
+
+	var novoSalario float64
+
+	if salario < 1000.00 {
+		novoSalario = salario + (salario * 0.10)
+	} else {
+		novoSalario = salario + (salario * 0.05)
+	}
+
+	fmt.Println("Novo salário:", novoSalario)
+}
+
+//Exercício 08//
+
+package main
+
+import "fmt"
+
+func main() {
+	var numero int
+
+	fmt.Print("Digite um número entre 1 e 7: ")
+	fmt.Scan(&numero)
+
+	var diaDaSemana string
+
+	switch numero {
+	case 1:
+		diaDaSemana = "Domingo"
+	case 2:
+		diaDaSemana = "Segunda-feira"
+	case 3:
+		diaDaSemana = "Terça-feira"
+	case 4:
+		diaDaSemana = "Quarta-feira"
+	case 5:
+		diaDaSemana = "Quinta-feira"
+	case 6:
+		diaDaSemana = "Sexta-feira"
+	case 7:
+		diaDaSemana = "Sábado"
+	default:
+		diaDaSemana = "Número inválido"
+	}
+
+	fmt.Println("Dia da semana:", diaDaSemana)
+}
+
+//Exercício 09//
+
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func main() {
+	var num1, num2, num3 float64
+
+	fmt.Print("Digite o primeiro número: ")
+	fmt.Scan(&num1)
+
+	fmt.Print("Digite o segundo número: ")
+	fmt.Scan(&num2)
+
+	fmt.Print("Digite o terceiro número: ")
+	fmt.Scan(&num3)
+
+	numeros := []float64{num1, num2, num3}
+	sort.Float64s(numeros)
+
+	fmt.Println("Números em ordem crescente:", numeros)
+}
+
+//Exercício 10//
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var idade int
+
+	fmt.Print("Digite a idade: ")
+	fmt.Scan(&idade)
+
+	classificacao := ""
+
+	switch {
+	case idade <= 9:
+		classificacao = "mirim"
+	case idade >= 10 && idade <= 13:
+		classificacao = "infantil"
+	case idade >= 14 && idade <= 17:
+		classificacao = "juvenil"
+	default:
+		classificacao = "adulto"
+	}
+
+	fmt.Println("Classificação:", classificacao)
+}
+
+//Repetição//
+
+//Exercício 01//
+
+package main
+
+import "fmt"
+
+func main() {
+	for i := 1; i <= 10; i++ {
+		fmt.Println(i)
+	}
+}
+
+//Exercício 02//
+
+package main
+
+import "fmt"
+
+func main() {
+	for i := 0; i <= 20; i += 2 {
+		fmt.Println(i)
+	}
+}
+
+//Exercício 03//
+
+package main
+
+import "fmt"
+
+func main() {
+	for i := 1; i <= 19; i += 2 {
+		fmt.Println(i)
+	}
+}
+
+//Exercício 04//
+
+package main
+
+import "fmt"
+
+func main() {
+	for i := 0; i <= 30; i += 3 {
+		fmt.Println(i)
+	}
+}
+
+//Exercício 05//
+
+package main
+
+import "fmt"
+
+func main() {
+	for i := 10; i >= 1; i-- {
+		fmt.Println(i)
+	}
+}
+
+//Exercício 06//
+
+package main
+
+import "fmt"
+
+func main() {
+	var numero int
+	fmt.Print("Digite um número: ")
+	fmt.Scanln(&numero)
+
+	fmt.Println("Tabuada de multiplicação de", numero)
+	for i := 1; i <= 10; i++ {
+		fmt.Printf("%d x %d = %d\n", numero, i, numero*i)
+	}
+}
+
+//Exercício 07//
+
+package main
+
+import "fmt"
+
+func main() {
+	for i := 1; i <= 100; i++ {
+		if i%3 == 0 && i%5 == 0 {
+			fmt.Println("FizzBuzz")
+		} else if i%3 == 0 {
+			fmt.Println("Fizz")
+		} else if i%5 == 0 {
+			fmt.Println("Buzz")
+		} else {
+			fmt.Println(i)
+		}
+	}
+}
+
+//Exercício 08//
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var numero int
+
+	fmt.Print("Digite um número inteiro positivo: ")
+	fmt.Scanln(&numero)
+
+	fmt.Println("Divisores do número", numero, ":")
+
+	for i := 1; i <= numero; i++ {
+		if numero%i == 0 {
+			fmt.Println(i)
+		}
+	}
+}
+
+//Exercício 09//
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var numero, soma, contador int
+	fmt.Println("Digite uma sequência de números inteiros (digite 0 para encerrar):")
+
+	for {
+		fmt.Print("Número: ")
+		fmt.Scanln(&numero)
+
+		if numero == 0 {
+			break
+		}
+
+		soma += numero
+		contador++
+	}
+
+	if contador == 0 {
+		fmt.Println("Nenhum número foi inserido.")
+	} else {
+		media := float64(soma) / float64(contador)
+		fmt.Println("A média dos números é:", media)
+	}
+}
+
+//Exercício 10//
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var numero, maior int
+	maior = 0
+	fmt.Println("Digite uma sequência de números inteiros (digite 0 para encerrar):")
+
+	for {
+		fmt.Print("Número: ")
+		fmt.Scanln(&numero)
+
+		if numero == 0 {
+			break
+		}
+
+		if numero > maior {
+			maior = numero
+		}
+	}
+
+	if maior == 0 {
+		fmt.Println("Nenhum número foi inserido.")
+	} else {
+		fmt.Println("O maior número é:", maior)
+	}
+}
